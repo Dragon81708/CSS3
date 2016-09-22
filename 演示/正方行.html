@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul,li{
+            list-style: none;
+        }
+        .on{
+            width: 800px;
+            margin: 30px auto;
+            perspective: 2000px;
+            -webkit-perspective: 2000px;
+            -moz-perspective: 2000px;
+            -ms-perspective: 2000px;
+            -o-perspective: 2000px;
+        }
+        .nn{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            -webkit-animation: move 10s ease-in-out infinite;
+            animation: move 10s ease-in-out infinite;
+        }
+        .nn li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 196px;
+            height: 196px;
+            border: 2px solid red;
+            line-height: 200px;
+            background: lightslategray;
+            font-size: 50px;
+            text-align: center;
+        }
+        .one1{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .one2{
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+        .one3{
+             transform: rotateY(90deg) translateZ(100px);
+         }
+        .one4{
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        .one5{
+            transform:translateZ(100px);
+        }
+        .one6{
+            transform:translateZ(-100px);
+        }
+        @keyframes move {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg) ;
+            }
+            100%{
+                transform: rotateX(90deg) rotateY(90deg) ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="on">
+    <ul class="nn">
+        <li class="one1">1</li>
+        <li class="one2">2</li>
+        <li class="one3">3</li>
+        <li class="one4">4</li>
+        <li class="one5">5</li>
+        <li class="one6">6</li>
+    </ul>
+</div>
+
+</body>
+</html>

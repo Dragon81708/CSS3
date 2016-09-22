@@ -1,0 +1,37 @@
+transform-style:preserve-3d ->默认是flat（平面展示） 设置是否在3d空间里展示
+perspective:600px   视距 （隔多远看物体）--》近大远小 500到2000px间
+
+transform:perspective(600px)
+perspective-origin:center center ;透视位置/焦点位置看-->只能设置在父级，不可设置在子级
+
+
+2D:transformfunction:
+   transform:rotate()  旋转角度 deg rotateX/rotateY/rotateZ(和rotate是同样的效果)
+   transform:skew();   倾斜角度 deg /skewX/skewY/skewZ
+   transform:scale();  缩放         /scaleX/scaleY/scaleZ
+   transform:translate；位移 px     /translateX/translateY/translateZ
+transformfunction:
+ transform:rotate()
+
+
+3D: transformfunction:
+平移： translate3d(x,y,z) ->translateZ() translate(x,u) -->translateX() translateY()
+缩放：scale3d(sx,sy,sz) 默认值是1；-->scaleX(),scaleY(),scaleZ()-->scaleZ()单独设置是不起作用，必须和其他变形属性一起设置才能起作用
+
+旋转：rotate3d(rx,ry,rz,angle)()
+    -->rotateX(),rotateY(),rotateZ()
+
+    rx:X轴的矢量坐标  数值
+    ry:Y轴的矢量坐标  数值
+    rz:Z轴的矢量坐标  数值
+    angle:角度       单位是：deg
+rotateX（10deg）-->rotateX（1,0,0,10deg）
+rotateY（20deg）-->rotateY（0,1,0,20deg）
+rotateZ（30deg）-->rotateZ（0,0,1,30deg）
+
+transform:translateZ();可以改变视距，大于零物体看上去变大，小于零，物体看上去小；
+
+rotateX 人面向图片时 前扑负后抑正
+rotateY 人面向图片时 右翻正 左翻负
+translateZ()效果等同于rotateZ
+

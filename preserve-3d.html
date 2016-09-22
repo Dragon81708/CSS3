@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .stage{
+            width: 500px;
+            height: 500px;
+            perspective: 500px;
+            background: rosybrown;
+        }
+        .one {
+            margin: 30px auto;
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            transform-style: preserve-3d;
+
+
+        }
+
+        .two {
+            width: 100%;
+            height: 100%;
+            background: red;
+            transform: perspective(200px) rotateX(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="stage"><!--舞台（视角对象）-->
+    <div class="one"><!--设置所有的子元素在3D空间里展示-->
+
+        <div class="two">
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
